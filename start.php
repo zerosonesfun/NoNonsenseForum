@@ -112,7 +112,7 @@ define ('FORUM_PATH', safeURL (str_replace (
 /* site configuration
    ---------------------------------------------------------------------------------------------------------------------- */
 //try set the forum owner’s personal config ('config.php'), if it exists
-@(include './config.php');
+
 //include the defaults: (for anything missing from the user’s config)
 //see that file for descriptions of the different available options
 @(include './config.default.php') or require FORUM_LIB.'error_configdefault.php';
@@ -149,7 +149,7 @@ define ('SUBFORUM', @end (explode ('/', trim (PATH, '/'))));
 
 //deny access to some folders
 //TODO: this should generate a 403, but we don't have a 403 page designed yet
-foreach (array ('users/', 'lib/', 'themes/', 'cgi-bin/') as $_) if (stripos ($_, PATH) === 0) die ();
+if (PATH != "") foreach (array ('users/', 'lib/', 'themes/', 'cgi-bin/') as $_) if (stripos ($_, PATH) === 0) die ();
 
 //we have to change directory for `is_dir` to work, see <uk3.php.net/manual/en/function.is-dir.php#70005>
 //being in the right directory is also assumed for reading 'mods.txt' and when generating the RSS (`indexRSS`)
