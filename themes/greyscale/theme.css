@@ -94,10 +94,12 @@ pre, code, samp                 {font: 12.5px/20px Monaco, Consolas, "Liberation
                                  -webkit-border-radius: 10px;
                                     -moz-border-radius: 10px;
                                          border-radius: 10px;
-                                 font-size: 12px !important;
+                                 font-size: 16px !important;
                                  line-height: 20px; /*< equalises vertical position of search box in IE8 */
                                  background: white url("img/search.png") no-repeat 5px 50%;
-                                 background-size: 13px 17px;}
+                                 background-size: 13px 17px;
+                                 outline: none;
+                                 box-shadow: none;}
 ::-webkit-search-decoration,    /* reset Safari custom search-box design */
  ::-webkit-search-cancel-button {display: none;}
 input[type=search]              {-webkit-appearance: textfield;
@@ -422,13 +424,13 @@ h1                              {font-size: 20px !important;}
 #mast .nnf_forum-name           {margin-right: 0; /*min-height: 40px;*/}
 
 /* re-position the search field below the title */
-#search                         {float: left;  height: 35px; margin: 45px 0 0 0; padding: 0 20px 10px 40px;
+#search                         {float: left;  height: 20px; margin: 45px 0 0 0; padding: 0 20px 10px 40px;
                                  -webkit-box-sizing: border-box;
                                     -moz-box-sizing: border-box;
                                          box-sizing: border-box;
                                  border: none; text-align: right;
                                  background: #222;}
-#query, #search-query                          {width: 100%; padding: 4px 0; text-indent: 15px; font-size: 18px;
+#query, #search-query                          {width: 100%; padding: 4px 0; text-indent: 20px; height: 10px; font-size: 16px !important;
                                  -webkit-box-sizing: padding-box;
                                     -moz-box-sizing: padding-box;
                                          box-sizing: padding-box;
