@@ -259,7 +259,7 @@ function formatText (
         $text = preg_replace (
                 //example: _italic_ & *bold*
                 array ('/(?<=\s|^)_(?!_)(.*?)(?<!_)_(?=\s|$)/m',        '/(?<![*\w])\*(?!\*)(.*?)(?<!\*)\*(?![*\w])/'),
-                array ('<em>_$1_</em>',                                 '<strong>*$1*</strong>'),
+                array ('<em>$1</em>',                                 '<strong>$1</strong>'),
         $text);
         
         /* divider: "---"
