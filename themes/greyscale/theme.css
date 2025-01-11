@@ -18,7 +18,10 @@ header, nav, section,           /* this doesn’t get set on browsers without an
                                 
 
 html, body                      {width: 100%; overflow-x: hidden; margin: 0; padding: 0; border: 0; color: #888;}
-html                            {font: 16px/20px Corbel, "URW Gothic L", "Liberation Sans", "Trebuchet MS", sans-serif;
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+html                            {font-size: 16px;
                                  background: #ddd url("img/bg.png") fixed repeat-x top center; word-wrap: break-word;
                                  /* CSS3 gradients for browsers that support it: */
         /* Chrome / Safari */    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#ddd));
@@ -40,10 +43,7 @@ h1                              {margin: 0; padding: 20px 0 20px 60px;
                                  font-weight: bold; font-size: 22px; line-height: 20px; color: #f7f6f7;
                                  background: #222;}
 
-p                               {margin: 0; padding: 0 20px 20px;
-                                 /* fonts in Linux are pretty awful, so we go for a "centruy gothic" like font for titles
-                                    and other UI ("URW Gothic L"), but a normal-looking Arial-like for the post text */
-                                 font-family: Corbel, "Liberation Sans", "Trebuchet MS", sans-serif}
+p                               {margin: 0; padding: 0 20px 20px;}
 
 a                               {color: #222; text-decoration: none; font-weight: bold;}
 a:hover                         {color: #666; text-decoration: underline;}
@@ -51,7 +51,7 @@ a:hover                         {color: #666; text-decoration: underline;}
 b.nnf_mod                       {/* all moderators have underlined names */
                                  /*text-decoration: underline;*/}
 
-time                            {font-family: Calibri, "Liberation Sans", Tahoma, sans-serif; text-transform: uppercase;}
+time                            {text-transform: uppercase;}
 
 blockquote                      {position: relative; margin: 20px 0 0; padding: 0 20px 0 19px;
                                  border-left: 1px dotted #222; font-style: italic;}
@@ -159,7 +159,7 @@ section h1                      {background: #222 none no-repeat 15px 15px;}
 
 /* page list */
 section nav                     {position: relative; height: 40px; overflow: hidden; padding: 0 1px;
-                                 font-family: Calibri, "Liberation Sans", Tahoma, sans-serif; line-height: 40px;
+                                 line-height: 40px;
                                  text-align: right; text-transform: uppercase; color: #aaa;
                                  background-color: #444;}
 
@@ -189,8 +189,7 @@ ol.ui li                        {margin: 0; border-bottom: 1px dotted #444;
 
 ol.ui li.nnf_sticky             {background: #eee;}
 
-ol.ui li i                      {float: left; width: 25px; margin: 0 10px 0 -50px;
-                                 font-family: Calibri, "Liberation Sans", Tahoma, sans-serif; text-align: right;}
+ol.ui li i                      {float: left; width: 25px; margin: 0 10px 0 -50px; text-align: right;}
 
 ol.ui li b                      {float: right; padding-left: 10px; text-align: right;}  /* author */
 ol.ui li time                   {float: right; width: 9.1em;                            /* timestamp */
@@ -295,8 +294,6 @@ input:-moz-placeholder          {text-overflow: ellipsis;}
 form                            {position: relative; /*< for the benefit of IE6/7 whom do not have box-sizing */
                                  margin: 0; padding: 0; border: 1px solid #444; border-width: 0 1px;}
 
-input, textarea                 {font: 16px/20px Corbel, "Liberation Sans", "Trebuchet MS", sans-serif;}
-
 label                           {display: block; height: 40px; padding: 0 20px; line-height: 40px; color: #222;
                                  cursor: pointer;}
 
@@ -346,7 +343,7 @@ input[type=text],
 #nnf_text-field                 {display: block; width: 100%; padding: 20px; margin: 0 -41px 0 0;
                                  border: none; border-right: 1px dotted #444;
                                  /* fix width for browsers that allow resizable text-areas */
-                                 min-width: 100%; max-width: 100%; min-height: 300px; max-height: 700px;}
+                                 min-width: 100%; max-width: 100%; min-height: 300px; max-height: 700px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
 
 /* the e-mail field is an anti-spam feature and not used by the user */
 #nnf_email                      {display: none;}
@@ -476,7 +473,8 @@ article header time             {/* don’t show the post time in portrait */
    ---------------------------------------------------------------------------------------------------------------------- */
 input[type="text"], textarea,   /* remove the field styling in iOS */
  input[type="password"]         {-webkit-appearance: none; -moz-appearance: none;
-                                 -webkit-border-radius: 0;}
+                                 -webkit-border-radius: 0;
+                                 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
 
 /* set text-indent of the placeholder text, except for the textarea, which has padding
    (interesting note: iOS 4 can't cope with this selector being split, iOS5 can) */
