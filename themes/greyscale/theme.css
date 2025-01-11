@@ -89,7 +89,7 @@ pre, code, samp                 {font: 12.5px/20px Monaco, Consolas, "Liberation
                                 *position: absolute; *right: 10%; /* IE6/7 have float issues with the language selector */
                                  border: none; /* very bizarely, the positioning magically adds a border in Firefox! */
                                  text-align: right; background: none;}
-#query                          {display: block; /*< removes magic-spacing / height on input box */
+#query, #search-query                          {display: block; /*< removes magic-spacing / height on input box */
                                  width: 180px; height: 20px; margin: 0; padding: 0 5px 0 25px; border: none;
                                  -webkit-border-radius: 10px;
                                     -moz-border-radius: 10px;
@@ -262,15 +262,19 @@ article .hr                     {height: 1px; margin: 19px 0 0; padding: 0; over
                                  border-bottom: 1px dotted #222; text-indent: -999em;}
 
 
-/* markup / privacy page
+/* markup / privacy / search page
    ====================================================================================================================== */
 #markup h1,                     /* title icon */
- #privacy h1                    {background-image: url("img/help.png"); background-size: 32px 32px;}
+ #privacy h1,
+  #search h1                    {background-image: url("img/help.png"); background-size: 32px 32px;}
 
 #markup header ol,              /* table of contents */
- #privacy header ol             {margin: 0; padding: 0;}
+ #privacy header ol,
+  #search header ol            {margin: 0; padding: 0;}
+   
 #markup header li,
- #privacy header li             {display: inline; padding: 0 20px 0 0;
+ #privacy header li,
+  #search header li             {display: inline; padding: 0 20px 0 0;
                                  /* do not line-break in the middle of a link on small screens, like mobiles */
                                  white-space: nowrap; }
 
@@ -424,7 +428,7 @@ h1                              {font-size: 20px !important;}
                                          box-sizing: border-box;
                                  border: none; text-align: right;
                                  background: #222;}
-#query                          {width: 100%; padding: 4px 0; text-indent: 15px; font-size: 18px;
+#query, #search-query                          {width: 100%; padding: 4px 0; text-indent: 15px; font-size: 18px;
                                  -webkit-box-sizing: padding-box;
                                     -moz-box-sizing: padding-box;
                                          box-sizing: padding-box;
@@ -542,7 +546,7 @@ section>h1 + nav                {background: none; float: right; margin-top: -50
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
 
-#query                          {background-image: url("img/search_2x.png");}
+#query, #search-query                          {background-image: url("img/search_2x.png");}
 #index                          {background-image: url("img/here_2x.png");}
 #nnf_add, #nnf_reply            {background-image: url("img/add_2x.png");}
 #nnf_rss                        {background-image: url("img/rss_2x.png");}
@@ -551,7 +555,7 @@ section>h1 + nav                {background: none; float: right; margin-top: -50
 #nnf_replies h1                 {background-image: url("img/replies_2x.png");}
 a.delete                        {background-image: url("img/delete_2x.png");}
 a.append                        {background-image: url("img/append_2x.png");}
-#markup h1, #privacy h1 {background-image: url("img/help_2x.png");}
+#markup h1, #search h1, #privacy h1 {background-image: url("img/help_2x.png");}
 #nnf_new-form h1,
  #nnf_reply-form h1, #append h1{background-image: url("img/new_2x.png");}
 #delete h1                      {background-image: url("img/deletetitle_2x.png");}
