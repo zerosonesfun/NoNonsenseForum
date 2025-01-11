@@ -47,7 +47,7 @@ function preprocess_superglobals () {
            HTML so introduces more complications in processing and outputting. this feature is removed entirely in PHP5.4.
            if magic quotes is on, we strip the extra slashes from the inputs so as to normalise behaviour across different
            servers and PHP versions */
-        if (get_magic_quotes_gpc ()) {
+        if (function_exists ("get_magic_quotes_gpc") && get_magic_quotes_gpc ()) {
                 //great care has to be taken to pass and process the superglobals by reference
                 $gpc = array (&$_GET, &$_POST, &$_COOKIE, &$_ENV);
                 //drill through the selected superglobals, applying `stripslashes`
